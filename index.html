@@ -3,99 +3,181 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bytly</title>
-  <meta name="description" content="Bytly — coming soon. Get in touch for support." />
-  <style>
-    :root {
-      --bg: #0f1115;
-      --card: #171a21;
-      --text: #f4f5f7;
-      --muted: #9aa2af;
-      --accent: #ff7a45;
-      --border: #262b35;
-    }
-    @media (prefers-color-scheme: light) {
-      :root {
-        --bg: #f7f8fa;
-        --card: #ffffff;
-        --text: #1a1d23;
-        --muted: #5c6470;
-        --accent: #f0592b;
-        --border: #e6e8ec;
-      }
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-      line-height: 1.6;
-    }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 48px 40px;
-      max-width: 480px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.25);
-    }
-    .logo {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 72px;
-      height: 72px;
-      border-radius: 18px;
-      background: var(--accent);
-      font-size: 38px;
-      margin-bottom: 24px;
-    }
-    h1 {
-      font-size: 2.2rem;
-      letter-spacing: -0.02em;
-      margin-bottom: 12px;
-    }
-    p.tagline {
-      color: var(--muted);
-      font-size: 1.05rem;
-      margin-bottom: 32px;
-    }
-    .support {
-      border-top: 1px solid var(--border);
-      padding-top: 24px;
-      font-size: 0.95rem;
-      color: var(--muted);
-    }
-    .support a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .support a:hover { text-decoration: underline; }
-    footer {
-      margin-top: 28px;
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-  </style>
+  <title>Bytly — Discover restaurants through friends you trust</title>
+  <meta name="description" content="Bytly is the restaurant app built around the people whose taste you trust: your friends. Discover spots on the map, share honest reviews, and save wishlists." />
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <main class="card">
-    <div class="logo">🍽️</div>
-    <h1>Bytly</h1>
-    <p class="tagline">Something tasty is on the way. This is a placeholder page — the real thing is coming soon.</p>
-    <div class="support">
-      Need help or have a question?<br />
-      Email us at <a href="mailto:bytly.team@gmail.com">bytly.team@gmail.com</a>
+
+  <!-- ===== Nav ===== -->
+  <header class="nav">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <span class="mark">🍽️</span>
+        <span>Bytly</span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+      <nav class="nav-links">
+        <a class="link active" href="index.html">Home</a>
+        <a class="link" href="features.html">Features</a>
+        <a class="link" href="support.html">Support</a>
+        <a class="appstore-badge sm" href="#" aria-label="Coming soon to the App Store">
+          <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-92.6zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+          <span class="as-text"><span class="as-small">Coming soon</span><span class="as-big">App Store</span></span>
+        </a>
+      </nav>
     </div>
-    <footer>&copy; 2026 Bytly. All rights reserved.</footer>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Eat better, together</span>
+          <h1>Discover great restaurants through friends you actually trust.</h1>
+          <p class="lead">Instead of scrolling through thousands of anonymous ratings, Bytly shows you where your friends have actually eaten, what they thought, and the spots they're dying to try — all on a clean, map-first interface.</p>
+          <div class="hero-cta">
+            <a class="appstore-badge" href="#" aria-label="Coming soon to the App Store">
+              <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-92.6zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+              <span class="as-text"><span class="as-small">Coming soon on the</span><span class="as-big">App Store</span></span>
+              <span class="as-ribbon">Soon</span>
+            </a>
+            <a class="btn btn-ghost" href="support.html">Contact us</a>
+          </div>
+          <p class="hero-note">Free to use · Sign in with Apple · Your data is yours.</p>
+        </div>
+        <div class="hero-visual">
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <span class="ph-icon">🗺️</span>
+              <span class="ph-label">Screenshot coming soon</span>
+              <span class="ph-sub">Map-first discovery</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Screenshot showcase ===== -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">A peek inside</span>
+          <h2>Built for foodies who share</h2>
+          <p>Screenshots are on the way. Here's where the app's map, reviews, and collections will live.</p>
+        </div>
+        <div class="showcase">
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <span class="ph-icon">📍</span>
+              <span class="ph-label">Screenshot coming soon</span>
+              <span class="ph-sub">Explore the map</span>
+            </div>
+          </div>
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <span class="ph-icon">⭐</span>
+              <span class="ph-label">Screenshot coming soon</span>
+              <span class="ph-sub">Friend reviews</span>
+            </div>
+          </div>
+          <div class="phone-frame">
+            <div class="phone-screen">
+              <span class="ph-icon">📚</span>
+              <span class="ph-label">Screenshot coming soon</span>
+              <span class="ph-sub">Your collections</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Feature highlights ===== -->
+    <section class="bg-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Why Bytly</span>
+          <h2>Recommendations that actually matter</h2>
+          <p>No noise, no anonymous crowds — just the people whose taste you already trust.</p>
+        </div>
+        <div class="feature-grid">
+          <div class="card">
+            <div class="ico">🗺️</div>
+            <h3>Discover on the map</h3>
+            <p>Explore restaurants around you with a fast, map-first interface. Friends' picks, your wishlists, and new discoveries each get their own markers.</p>
+          </div>
+          <div class="card">
+            <div class="ico">👥</div>
+            <h3>Real friends, real taste</h3>
+            <p>See your friends' reviews and saved spots right on the map. When someone you trust loves a place, you'll know.</p>
+          </div>
+          <div class="card">
+            <div class="ico">📝</div>
+            <h3>Honest reviews</h3>
+            <p>Leave quick reactions or full reviews with ratings, price, photos, and notes on the vibe, service, and standout dishes.</p>
+          </div>
+          <div class="card">
+            <div class="ico">📚</div>
+            <h3>Wishlists &amp; collections</h3>
+            <p>Save spots into custom collections like "Date Night" or "Must-Try Ramen," each with your own icon. Your whole to-eat list, organized.</p>
+          </div>
+        </div>
+        <div style="text-align:center; margin-top:40px;">
+          <a class="btn btn-ghost" href="features.html">See all features →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA band ===== -->
+    <section>
+      <div class="container">
+        <div class="cta-band">
+          <h2>Start eating better, together.</h2>
+          <p>Bytly is launching soon on the App Store. Have a question or want to be an early tester? We'd love to hear from you.</p>
+          <div class="cta-actions">
+            <a class="appstore-badge" href="#" aria-label="Coming soon to the App Store">
+              <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-92.6zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+              <span class="as-text"><span class="as-small">Coming soon on the</span><span class="as-big">App Store</span></span>
+              <span class="as-ribbon">Soon</span>
+            </a>
+            <a class="btn btn-ghost" href="mailto:bytly.team@gmail.com">Email the team</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand"><span class="mark">🍽️</span><span>Bytly</span></div>
+          <p>The restaurant app built around the people whose taste you trust: your friends.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Product</h4>
+            <a href="index.html">Home</a>
+            <a href="features.html">Features</a>
+            <a href="support.html">Support</a>
+          </div>
+          <div class="footer-col">
+            <h4>Company</h4>
+            <a href="mailto:bytly.team@gmail.com">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Bytly. All rights reserved.</span>
+        <span>Made for foodies who share.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/script.js"></script>
 </body>
 </html>
